@@ -5,7 +5,7 @@
 Simple Keylog is being developed in Python and is a *work in progress*. The purpose is to log every key that has been pressed on the host computer and save it to a .txt file
 
 ## Functions
-- Log keys used in `keyfile.txt`. If the file `keyfile.txt` has not been created, the script will create it. If the the .txt already exists, text will be appended to it.
+- Log keys typed, inside the `keyfile.txt`. If the file `keyfile.txt` has not been created, the script will create it. If the the .txt already exists, text will be appended to it.
 - Table for Logging symbols:
 
 | Key Pressed | Logged as |
