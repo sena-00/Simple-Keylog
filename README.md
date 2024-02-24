@@ -8,7 +8,7 @@ Simple Keylog is being developed in Python and is a *work in progress*. The purp
 - If the file `keyfile.txt` has not been created, the script will create it. If the the .txt already exists, text will be appended to it.
 - Table for Logging symbols:
 
-| Symbol      | Logged as |
+| Key Pressed | Logged as |
 | ----------- | ----------- |
 | Backspace   | <*BackSpace*> |
 | Enter   | <*Enter*>         |
