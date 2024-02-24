@@ -16,6 +16,9 @@ Simple Keylog is being developed in Python and is a *work in progress*. The purp
 | Other Symbols   | <*Unhandled Special Key*>|
 - F10 has been added as a failsafe. In case the key is pressed, the script stops recording.
 
+## Demo
+The video below show a the demo for the current state of the application.
+
 https://github.com/sena-00/Simple-Keylog/assets/156020094/6a44d063-b3de-4a64-9633-a97cc7e4a8d9
 
 ## To-do List
