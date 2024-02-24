@@ -16,3 +16,4 @@ https://github.com/sena-00/Simple-Keylog/assets/156020094/6a44d063-b3de-4a64-963
 - [x] Create the original file
 - [x] Add Error handling for special characters
 - [ ] Set a hidden path for the "keyfile.txt" to be stored
+- [ ] Enable Dropbox token usage (Send log files to a rmeote dropbox account)
